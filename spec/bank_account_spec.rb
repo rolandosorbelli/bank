@@ -8,10 +8,10 @@ describe Bank do
 		end
 	end
 
-	# context "When testing the withdrawal method" do
-	# 	it "should test that the client is able to withdraw money" do
-	# 		subject.withdrawal("03-10-2017", 5000)
-	# 		expect(subject.bank_account).to eq([{date: "02-10-2017", amount: 1000}])
-	# 	end
-	# end
+	context "When testing the withdrawal method" do
+		it "should test that the client is able to withdraw money" do
+			subject.withdrawal("04-10-2017", 500)
+			expect(subject.bank_account).to eq([{date: "04-10-2017", withdrawal: 500}])
+		end
+	end
 end
