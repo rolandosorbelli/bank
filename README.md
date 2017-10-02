@@ -4,7 +4,7 @@ This is a Tech Test made using Ruby. A user can interact with the code via IRB t
 
 ## Getting started
 
-`git clone https://github.com/rolandosorbelli/bank.git`
+`git clone https://github.com/rolandosorbelli/bank.git` 
 run `bundle install`
 
 ## Usage
