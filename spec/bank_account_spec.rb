@@ -1,6 +1,12 @@
 require 'bank'
 
 describe Bank do
+  context 'When testing the bank_account array' do
+    it 'should test that the bank account is empty' do
+      expect(subject.bank_account).to eq([])
+    end
+  end
+
   context 'When testing the deposit method' do
     it 'should test that the client is able to make a deposit' do
       subject.deposit('02-10-2017', 1000)

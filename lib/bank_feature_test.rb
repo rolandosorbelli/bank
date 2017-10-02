@@ -1,4 +1,4 @@
-require_relative "bank"
+require_relative 'bank'
 
 bank = Bank.new
 p bank.balance
