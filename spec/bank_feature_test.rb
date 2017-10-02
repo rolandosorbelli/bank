@@ -1,4 +1,4 @@
-require_relative 'bank'
+require '../lib/bank'
 
 bank = BankAccount.new
 statement = BankStatement.new(bank)
