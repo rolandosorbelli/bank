@@ -1,4 +1,4 @@
-class Bank
+class BankAccount
   attr_accessor :bank_account, :balance
 
   def initialize(balance = 0)
@@ -15,12 +15,24 @@ class Bank
     @bank_account << { date: date, withdrawal: withdrawal, balance: @balance -= withdrawal }
     # <-- A date and an amount for the withdrawal go into the client's bank account, decreasing its balance
   end
+end
+
+class BankStatement
+  attr_accessor :client_account
+
+  def initialize(account = BankAccount.new)
+    @client_account = account.bank_account
+  end
 
   def print_statement
-    puts 'Date || Credit || Debit || Balance'
-    @bank_account.reverse_each do |n|
+    statement_headline
+    @client_account.reverse_each do |n|
       puts "#{n[:date]} || #{n[:deposit]} || #{n[:withdrawal]} || #{n[:balance]}"
     end
     # <-- Prints the statament in a reverse order including "date", potential "deposits" and/or "withdrawals" and "balance"
+  end
+
+  def statement_headline
+    puts 'Date || Credit || Debit || Balance'
   end
 end
