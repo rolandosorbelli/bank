@@ -1,4 +1,5 @@
-require '../lib/bank'
+require '../lib/bank_account'
+require '../lib/bank_statement'
 
 bank = BankAccount.new
 statement = BankStatement.new(bank)

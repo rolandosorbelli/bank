@@ -1,4 +1,5 @@
-require 'bank'
+require 'bank_statement'
+require 'bank_account'
 
 describe BankAccount do
   context 'When testing the bank_account array' do
