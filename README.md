@@ -16,5 +16,3 @@ You can interact with the project using your IRB.
 ## Running tests
 
 run `rspec`
-
-The test for the output of the statement is missing, that's why I included a feature test in the spec folder so you can test in the IRB that the statement can be printed.
