@@ -31,11 +31,11 @@ describe BankAccount do
 end
 
 describe BankStatement do
-
   context 'When testing the statement_headline method' do
     it 'should test that there is a headline in the statement' do
       expect { subject.print_statement }.to output(
-        "Date || Credit || Debit || Balance\n").to_stdout
+        "Date || Credit || Debit || Balance\n"
+      ).to_stdout
     end
   end
 end

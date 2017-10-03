@@ -8,13 +8,11 @@ class BankAccount
 
   def deposit(date, deposit)
     @bank_account << { date: date, deposit: deposit, balance: @balance += deposit }
-    # <-- A date and an amount for the deposit go into the client's bank account, increasing its balance
-  end
+  end # <-- A date and an amount for the deposit go into the client's bank account, increasing its balance
 
   def withdrawal(date, withdrawal)
     @bank_account << { date: date, withdrawal: withdrawal, balance: @balance -= withdrawal }
-    # <-- A date and an amount for the withdrawal go into the client's bank account, decreasing its balance
-  end
+  end # <-- A date and an amount for the withdrawal go into the client's bank account, decreasing its balance
 end
 
 class BankStatement
@@ -29,10 +27,9 @@ class BankStatement
     @client_account.reverse_each do |n|
       puts "#{n[:date]} || #{n[:deposit]} || #{n[:withdrawal]} || #{n[:balance]}"
     end
-    # <-- Prints the statament in a reverse order including "date", potential "deposits" and/or "withdrawals" and "balance"
-  end
+  end # <-- Prints the statament in a reverse order including "date", potential "deposits" and/or "withdrawals" and "balance"
 
   def statement_headline
     puts 'Date || Credit || Debit || Balance'
-  end
+  end # <-- Prints the headline of the statement
 end
