@@ -1,16 +1,19 @@
+# Manages the bank account
 class BankAccount
-  attr_accessor :bank_account, :balance
+  attr_accessor :transactions, :balance
 
   def initialize(balance = 0)
-    @bank_account = [] # <-- Client bank account
-    @balance = balance # <-- Balance of the bank account
+    @transactions = []
+    @balance = balance
   end
 
   def deposit(date, deposit)
-    @bank_account << { date: date, deposit: deposit, balance: @balance += deposit }
-  end # <-- A date and an amount for the deposit go into the client's bank account, increasing its balance
+    @balance += deposit
+    @transactions << { date: date, deposit: deposit, balance: @balance }
+  end
 
-  def withdrawal(date, withdrawal)
-    @bank_account << { date: date, withdrawal: withdrawal, balance: @balance -= withdrawal }
-  end # <-- A date and an amount for the withdrawal go into the client's bank account, decreasing its balance
+  def withdrawal(date, withdraw)
+    @balance -= withdraw
+    @transactions << { date: date, withdraw: withdraw, balance: @balance }
+  end
 end
