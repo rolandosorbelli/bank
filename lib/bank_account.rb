@@ -12,13 +12,8 @@ class BankAccount
     @transactions << BankTransaction.new(date, "deposit", amount, @balance)
   end
 
-  # def deposit(date, deposit)
-  #   @balance += deposit
-  #   @transactions << { date: date, deposit: deposit, balance: @balance }
-  # end
-
-  # def withdrawal(date, withdraw)
-  #   @balance -= withdraw
-  #   @transactions << { date: date, withdraw: withdraw, balance: @balance }
-  # end
+  def withdrawal(date, amount)
+    @balance -= amount
+    @transactions << BankTransaction.new(date, "withdrawal", amount, @balance)
+  end
 end
