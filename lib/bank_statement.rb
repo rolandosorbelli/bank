@@ -11,13 +11,15 @@ class BankStatement
     statement_body
   end
 
-  def statement_headline
-    puts 'Date || Credit || Debit || Balance'
-  end
-
   def statement_body
     @client_account.reverse_each do |n|
       puts "#{n[:date]} || #{n[:deposit]} || #{n[:withdraw]} || #{n[:balance]}"
     end
+  end
+
+  private
+
+  def statement_headline
+    puts 'Date || Credit || Debit || Balance'
   end
 end
