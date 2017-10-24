@@ -7,12 +7,12 @@ class BankStatement
   end
 
   def print_statement
-    puts statement_headline
+    statement_headline
     statement_body
   end
 
   def statement_body
-    @client_account.reverse.each do |t|
+    @client_account.each do |t|
       if t.type == 'deposit'
         puts "#{t.date} || #{t.amount}.00 || || #{t.balance}.00"
       else
@@ -24,6 +24,6 @@ class BankStatement
   private
 
   def statement_headline
-    'Date || Credit || Debit || Balance'
+    puts 'Date || Credit || Debit || Balance'
   end
 end
